@@ -18,7 +18,7 @@
     mb_regex_encoding('utf-8');
 
     require_once('config.php');
-    include_once('./m.php');
+    require_once('m.php');
 
     session_save_path('core/sessions');
     ini_set('session.gc_probability', 1);
