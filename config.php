@@ -41,11 +41,10 @@
     /**
      * Static files - CDN
      */
-    define("CDN", APP_URL."cdn/");
+    define("CDN", APP_URL."assets/");
     define("CSS", CDN."css/");
     define("IMG", CDN."img/");
     define("JS", CDN."js/");
-    define("ICO", CDN."ico/");
 
     /**
      * Database information
