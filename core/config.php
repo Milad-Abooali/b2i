@@ -22,7 +22,13 @@
 
     define("LOGGER", true);  // Active Logger
     define("LOG_FORCE", false);  // 1 Force to Show Log - 0: Need add '&mLog' to URL
-
+    define("LOG", [
+        "core"          => true,
+        "loader"        => false,
+        "database"      => true,
+        "language"      => false,
+        "view"          => false
+    ]);
     /**
      * App Settings
      */

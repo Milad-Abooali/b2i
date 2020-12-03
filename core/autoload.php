@@ -12,10 +12,6 @@
      * @version    1.0.0
      */
 
-    namespace App\Core;
-
-    if (!defined('START')) die('__ You just find me! 😹 . . . <a href="javascript:history.back()">Go Back</a>');
-
     class Loader
     {
 

@@ -36,7 +36,7 @@
     M::aLog('core','Session Token: <b style="color: darkred">'.$_SESSION['M']['TOKEN'].'</b>');
 
     include_once ('autoload.php');
-    spl_autoload_register('App\Core\Loader::lib');
+    spl_autoload_register('Loader::lib');
 
     /**
      * Multi Lang
@@ -47,7 +47,7 @@
     /**
      * Simple User
      */
-    $user = new SimpleUser();
+//    $user = new SimpleUser();
 
     $page = array();
     $page['data'] = explode("/", $_GET["rout"]??null) ;
@@ -63,7 +63,7 @@
         $actlog = new Actlog($call_path,implode('/',$page['data']));
 
         $class  = array_shift($page['data']) ?? 'core';
-        $act  = "App\Core\\". (array_shift($page['data']) ?? 'def');
+        $act  = (array_shift($page['data']) ?? 'def');
         $class_path = 'core/ajax/'.$class.'.php';
         M::aLog('core',"Class <b style='color:green'>$class</b> is called.",null,'ajax');
         if (file_exists($class_path)) {
