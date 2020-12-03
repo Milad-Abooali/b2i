@@ -22,7 +22,6 @@
          */
         function __construct($database)
         {
-
             $this->hostname = $database['hostname'];
             $this->port     = $database['port'];
             $this->username = $database['username'];
@@ -40,8 +39,6 @@
          */
         function __destruct()
         {
-            global  $___DB__LOG;
-            $___DB__LOG[] = $this->log();        
             mysqli_close($this->LINK);
         }
 
